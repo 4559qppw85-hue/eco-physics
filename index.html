@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>운동이 지구를 살린다 | AI 친환경 피트니스</title>
+  <style>
+    /* 기본 스타일 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      color: #333;
+    }
+
+    section {
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    /* 네비게이션 */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #e8f5e9;
+      padding: 15px 0;
+      text-align: center;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #1b5e20;
+    }
+
+    /* 메인화면 */
+    #home {
+      background: linear-gradient(to bottom, #a5d6a7, #e8f5e9);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #home h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    #home p {
+      font-size: 1.2em;
+    }
+
+    /* 계산기 섹션 */
+    #interaction input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    #interaction button {
+      padding: 10px 20px;
+      background-color: #43a047;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #interaction button:hover {
+      background-color: #2e7d32;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #1b5e20;
+    }
+
+    footer {
+      background: #e8f5e9;
+      padding: 30px;
+      text-align: center;
+      color: #555;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 -->
+  <nav>
+    <a href="#home">홈</a>
+    <a href="#problem">문제의식</a>
+    <a href="#idea">핵심 아이디어</a>
+    <a href="#interaction">참여하기</a>
+    <a href="#reflection">성찰</a>
+  </nav>
+
+  <!-- 메인화면 -->
+  <section id="home">
+    <h1>운동이 지구를 살린다</h1>
+    <p>AI 기반 친환경 피트니스 플랫폼</p>
+    <p>“당신의 운동 30분이 지구에 0.02kg의 탄소를 줄입니다.”</p>
+  </section>
+
+  <!-- 문제의식 -->
+  <section id="problem">
+    <h2>문제의식</h2>
+    <p>
+      현대 사회에서 심각한 생태·환경 문제 중 하나는 <b>탄소 배출 증가와 에너지 낭비</b>입니다.
+      특히 실내 체육시설에서는 조명, 냉·난방, 운동기구 사용으로 많은 에너지가 소비됩니다.
+      이를 해결하면 지속 가능한 스포츠 환경을 만들 수 있습니다.
+    </p>
+  </section>
+
+  <!-- 핵심 아이디어 -->
+  <section id="idea">
+    <h2>핵심 아이디어</h2>
+    <p>
+      AI 기반 친환경 피트니스 플랫폼은 사용자의 운동 데이터를 분석하여
+      <b>탄소 배출을 최소화하는 운동 루틴</b>을 추천하고,
+      운동 중 발생하는 에너지를 전기로 전환하는 스마트 시스템을 도입합니다.
+    </p>
+    <p>
+      체육학 지식을 활용해 운동 효율과 에너지 소비를 분석하고,
+      AI 기술이 이를 실시간으로 최적화하여 개인 맞춤형 친환경 운동을 제공합니다.
+    </p>
+  </section>
+
+  <!-- 참여하기(탄소 절감 계산기) -->
+  <section id="interaction">
+    <h2>운동으로 탄소 절감량 계산하기</h2>
+    <p>당신이 오늘 운동한 시간을 입력해보세요!</p>
+    <input type="number" id="minutes" placeholder="운동 시간(분)" />
+    <button onclick="calculate()">계산하기</button>
+    <div id="result"></div>
+  </section>
+
+  <!-- 성찰 -->
+  <section id="reflection">
+    <h2>성찰</h2>
+    <p>
+      이번 프로젝트를 통해 체육이 단순히 신체 활동을 가르치는 학문이 아니라,
+      <b>지속 가능한 사회를 만드는 데 기여할 수 있는 분야</b>라는 것을 깨달았습니다.
+      AI와 결합된 체육 교육은 환경 의식을 높이고, 미래형 체육교사로서의 가능성을 보여주었습니다.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 AI Eco Fitness Project | Made by 지민  
+  </footer>
+
+  <script>
+    function calculate() {
+      const minutes = document.getElementById("minutes").value;
+      if (minutes === "" || minutes <= 0) {
+        document.getElementById("result").innerText = "운동 시간을 입력해주세요!";
+        return;
+      }
+      const savedCO2 = (minutes * 0.00067).toFixed(3); // 단순 계산식
+      document.getElementById("result").innerText = 
+        `당신의 운동 ${minutes}분으로 약 ${savedCO2}kg의 탄소를 절감했습니다! 🌱`;
+    }
+  </script>
+</body>
+</html>
